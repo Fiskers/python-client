@@ -298,7 +298,7 @@ class SlackTransport(Transport):
             },
             "settings": {
                 "org_deploy_enabled": True,
-                "socket_mode_enabled": False,  # noqa: S105 -- Slack manifest boolean
+                "socket_mode_enabled": False,  # nosec B105 -- Slack manifest boolean
                 "token_rotation_enabled": False,
                 "interactivity": {
                     "is_enabled": True,
