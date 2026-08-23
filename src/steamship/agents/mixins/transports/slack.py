@@ -298,8 +298,8 @@ class SlackTransport(Transport):
             },
             "settings": {
                 "org_deploy_enabled": True,
-                "socket_mode_enabled": False,  # nosec -- Slack manifest boolean, not a secret
-                "token_rotation_enabled": False,
+                "socket_mode_enabled": False,
+                "token_rotation_enabled": False,  # noqa: S105 -- boolean setting, not a token
                 "interactivity": {
                     "is_enabled": True,
                     "request_url": f"{self.agent_service.context.invocable_url}slack_respond",
