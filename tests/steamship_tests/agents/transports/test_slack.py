@@ -24,7 +24,7 @@ def test_slack(client: Steamship):
         # This will allow us to test for the proper receipt of messages.
         instance_config = {
             "slack_api_base": mock_chat_api.invocation_url,
-            "telegram_token": "",
+            "telegram_token": "",  # noqa: S105 -- intentionally empty test config
             "telegram_api_base": "",
         }
 
