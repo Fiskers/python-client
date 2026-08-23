@@ -43,7 +43,7 @@ def test_telegram(client: Steamship):
         # the bot token to not be empty and the two appended to each other to just equal the
         # invocation url.
         instance_config = {
-            "telegram_token": "abcdefg",
+            "telegram_token": "abcdefg",  # noqa: S105 -- non-secret test token
             "telegram_api_base": mock_chat_api.invocation_url[:-1],
             "slack_api_base": mock_chat_api.invocation_url,
         }
